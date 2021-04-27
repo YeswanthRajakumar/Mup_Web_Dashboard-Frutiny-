@@ -12,6 +12,7 @@ firebase
     for (width in fruitWidthObject) {
       width = fruitWidthObject[width];
       console.log("Width of Fruit : " + width);
+      document.getElementById("fruit-width").innerText = width;
       break;
     }
   });
@@ -29,6 +30,8 @@ firebase
     for (gas in fruitGasObject) {
       gas = fruitGasObject[gas];
       console.log("Gas of Fruit : " + gas);
+         document.getElementById("fruit-gas").innerText = gas;
+  
       break;
     }
   });
@@ -45,6 +48,8 @@ firebase
     for (height in fruitHeightObject) {
       height = fruitHeightObject[height];
       console.log("Height of Fruit : " + height);
+    document.getElementById("fruit-height").innerText = height;
+
       break;
     }
   });
@@ -61,6 +66,7 @@ firebase
     for (irvalue in fruitIrObject) {
       ir = fruitIrObject[irvalue];
       console.log("IR value of Fruit : " + ir);
+    document.getElementById("fruit-ir").innerText = ir;
       break;
     }
   });
@@ -78,6 +84,25 @@ firebase
     for (vol in fruitVolumeObject) {
       volume = fruitVolumeObject[vol];
       console.log("Volume of Fruit : " + volume);
+     
+    document.getElementById("fruit-weight").innerText = volume;
+
       break;
     }
   });
+
+function getBrixVal(){
+    let max =100;
+    let min = 30;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    document.getElementById("brix_value").innerText = getBrixVal()+"%";
+
+
+
+function chartVal() {
+  let max = 80;
+  let min = 12;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
